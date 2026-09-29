@@ -100,6 +100,9 @@ h1 {
   font-size: 18px;
 }
 .links a { display: inline-flex; align-items: center; gap: 7px; }
+.links a:hover { text-decoration: none; }
+.links a:hover span { text-decoration: underline; text-underline-offset: 3px; }
+.links.emails { margin-top: 12px; }
 .links .cv {
   background: var(--accent);
   color: #fff;
@@ -107,7 +110,8 @@ h1 {
   border-radius: 6px;
   font-weight: 500;
 }
-.links .cv:hover { text-decoration: none; opacity: .9; }
+.links .cv:hover { opacity: .9; }
+.links .cv:hover span { text-decoration: none; }
 
 @media (max-width: 640px) {
   .intro { grid-template-columns: 1fr; gap: 20px; padding-top: 36px; }
