@@ -22,6 +22,8 @@
       <ul>
         <li><a href="#research">Research</a></li>
         <li><a href="#publications">Publications</a></li>
+        <li><a href="#talks">Talks</a></li>
+        <li><a href="#notes">Notes</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="assets/Tate_Middleton_CV.pdf">CV</a></li>
@@ -35,10 +37,10 @@
       <img src="assets/img/pfp.jpg" alt="Tate Middleton">
       <div>
         <h1>Tatum “Tate” Middleton</h1>
-        <p class="role">B.S. Physics, Computer Science minor<br>University of Colorado Boulder</p>
+        <p class="role">B.S. Physics, Computer Science Minor<br>University of Colorado Boulder</p>
         <p>
-          I'm an undergraduate researcher in the <strong>Xun Gao group at JILA</strong>, where I work at the
-          intersection of quantum information and machine learning, and an Applied Physics Intern at
+          I’m an undergraduate researcher in the <strong>Xun Gao group at JILA</strong>, where I work at the
+          intersection of quantum information and machine learning. I’m also an applied physics intern at
           <strong>SRI International</strong>. Previously, I worked on neutral-atom quantum computing hardware in the
           Adam Kaufman group at JILA.
         </p>
@@ -61,178 +63,417 @@
     <section id="research">
       <h2>Research Experience</h2>
 
-      <div class="item">
-        <div class="item-head">
+      <details class="group">
+        <summary>
           <h3>JILA, Xun Gao Group · University of Colorado</h3>
-          <span class="date">09/2024 – Present</span>
+          <span class="meta">09/2024 - Present</span>
+          <span class="sub">Undergraduate Researcher · Quantum Information &amp; Classical Machine Learning</span>
+        </summary>
+        <div class="group-body">
+          <details class="drop">
+            <summary><span class="label">Honors Thesis</span></summary>
+            <div class="drop-body">
+              <p>Analyzing the semantic geometry of datasets through diffusion-model dynamics, using conditional mutual
+                information phase transitions along denoising paths, continuing the work in
+                <a href="https://arxiv.org/abs/2609.38176v1" target="_blank" rel="noopener">arXiv:2609.38176</a>.</p>
+            </div>
+          </details>
+          <details class="drop">
+            <summary><span class="label">Quantum Constrained MRF MAP Inference via the Extended <span class="nowrap">Bose-Hubbard</span> Hamiltonian</span></summary>
+            <div class="drop-body">
+              <p>Adapting classical MRF MAP inference into quantum adiabatic algorithms targeting quantum advantage on
+                neutral-atom hardware; built an experimental topological Hopfield network model for Bose-Hubbard quantum
+                computers.</p>
+            </div>
+          </details>
+          <details class="drop">
+            <summary><span class="label">Tensor-Network Simulation</span></summary>
+            <div class="drop-body">
+              <p>Simulating neutral-atom lattice dynamics with tensor-network methods (DMRG, TDVP via TeNPy).</p>
+            </div>
+          </details>
+          <details class="drop">
+            <summary><span class="label">Path-Integral Methods</span></summary>
+            <div class="drop-body">
+              <p>Explored stochastic path-integral (Martin-Siggia-Rose) methods to characterize the limits of
+                computational advantage for ML on quantum and thermodynamic sampling platforms.</p>
+            </div>
+          </details>
+          <details class="drop">
+            <summary><span class="label">Early Diffusion Models</span></summary>
+            <div class="drop-body">
+              <p>Built early ML models for novel diffusion-model methods as precursor work to
+                <a href="https://arxiv.org/abs/2508.06614" target="_blank" rel="noopener">arXiv:2508.06614</a>.</p>
+            </div>
+          </details>
         </div>
-        <div class="sub">Undergraduate Researcher · Quantum &amp; classical machine learning</div>
-        <ul>
-          <li>Honors thesis: analyzing the semantic geometry of datasets through diffusion-model dynamics, using
-            conditional mutual information phase transitions along denoising paths, continuing
-            <a href="https://arxiv.org/abs/2605.04830" target="_blank" rel="noopener">arXiv:2605.04830</a>.</li>
-          <li>Adapting classical MRF MAP inference into quantum adiabatic algorithms targeting quantum advantage on
-            neutral-atom hardware; built an experimental topological Hopfield network model for Bose–Hubbard quantum
-            computers.</li>
-          <li>Simulating neutral-atom lattice dynamics with tensor-network methods (DMRG, TDVP via TeNPy).</li>
-          <li>Explored stochastic path-integral (Martin–Siggia–Rose) methods to characterize the limits of computational
-            advantage for ML on quantum and thermodynamic sampling platforms.</li>
-          <li>Built early ML models for novel diffusion-model methods, precursor work to
-            <a href="https://arxiv.org/abs/2508.06614" target="_blank" rel="noopener">arXiv:2508.06614</a>.</li>
-        </ul>
-      </div>
+      </details>
 
-      <div class="item">
-        <div class="item-head">
+      <details class="group">
+        <summary>
           <h3>SRI International · Boulder, CO</h3>
-          <span class="date">05/2026 – Present</span>
+          <span class="meta">05/2026 - Present</span>
+          <span class="sub">Applied Physics Intern · Quantum Optics &amp; Photonics</span>
+        </summary>
+        <div class="group-body">
+          <details class="drop">
+            <summary><span class="label">QKD Attack Testing</span></summary>
+            <div class="drop-body">
+              <p>Designed an optics experiment to test and verify attacks against BB84 quantum key distribution
+                systems, validating attack models with the theory team using single-photon counters and FPGA
+                tracking.</p>
+            </div>
+          </details>
+          <details class="drop">
+            <summary><span class="label">Photonic Circuits</span></summary>
+            <div class="drop-body">
+              <p>Designed, simulated (Tidy3D), and tested photonic integrated circuits, including ring resonators and
+                optical phased arrays.</p>
+            </div>
+          </details>
+          <details class="drop">
+            <summary><span class="label">FPGA Control System</span></summary>
+            <div class="drop-body">
+              <p>Built a 64-channel photonic hardware control system (PySide6/Qt) communicating with a Zynq FPGA for
+                real-time control.</p>
+            </div>
+          </details>
         </div>
-        <div class="sub">Applied Physics Intern · Quantum optics &amp; photonics</div>
-        <ul>
-          <li>Designed an optics experiment to test and verify attacks against BB84 quantum key distribution systems,
-            validating attack models with the theory team using single-photon counters and FPGA tracking.</li>
-          <li>Designed, simulated (Tidy3D), and tested photonic integrated circuits, including ring resonators and
-            optical phased arrays.</li>
-          <li>Built a 64-channel photonic hardware control system (PySide6/Qt) communicating with a Zynq FPGA for
-            real-time control.</li>
-        </ul>
-      </div>
+      </details>
 
-      <div class="item">
-        <div class="item-head">
+      <details class="group">
+        <summary>
           <h3>JILA, Adam Kaufman Group · University of Colorado</h3>
-          <span class="date">05/2024 – 08/2025</span>
+          <span class="meta">05/2024 - 08/2025</span>
+          <span class="sub">Undergraduate Researcher · Neutral-Atom Quantum Computing / AMO Physics</span>
+        </summary>
+        <div class="group-body">
+          <details class="drop">
+            <summary><span class="label">Optical Cavity</span></summary>
+            <div class="drop-body">
+              <p>Simulated and built a Fabry-Pérot optical cavity for atomic control, with its length tuned to an
+                integer number of wavelengths.</p>
+            </div>
+          </details>
+          <details class="drop">
+            <summary><span class="label">Gaussian Beam Simulation</span></summary>
+            <div class="drop-body">
+              <p>Wrote a numerical simulation of Gaussian beam propagation through complex optics using ABCD matrices,
+                accurate to 0.001&nbsp;mm.</p>
+            </div>
+          </details>
+          <details class="drop">
+            <summary><span class="label">Laser Drift Correction</span></summary>
+            <div class="drop-body">
+              <p>Built a closed-loop PID system (Python, Raspberry Pi) correcting laser positional drift with 97%
+                accuracy and millisecond correction times.</p>
+            </div>
+          </details>
         </div>
-        <div class="sub">Undergraduate Researcher · Neutral-atom quantum computing / AMO physics</div>
-        <ul>
-          <li>Simulated and built a Fabry–Pérot optical cavity tuned to an integer-wavelength length for atomic control.</li>
-          <li>Wrote a numerical simulation of Gaussian beam propagation through complex optics using ABCD matrices,
-            accurate to 0.001&nbsp;mm.</li>
-          <li>Built a closed-loop PID system (Python, Raspberry Pi) correcting laser positional drift with 97% accuracy
-            and millisecond correction times.</li>
-        </ul>
-      </div>
+      </details>
 
-      <div class="item">
-        <div class="item-head">
+      <details class="group">
+        <summary>
           <h3>Laboratory for Atmospheric and Space Physics · University of Colorado</h3>
-          <span class="date">08/2022 – 05/2023</span>
+          <span class="meta">08/2022 - 05/2023</span>
+          <span class="sub">Student Researcher · Thiemann Group</span>
+        </summary>
+        <div class="group-body">
+          <details class="drop">
+            <summary><span class="label">Gravity-Wave Imaging</span></summary>
+            <div class="drop-body">
+              <p>Built a MATLAB image-processing pipeline that directly observed high-altitude gravity waves for the
+                first time in NASA satellite imagery; co-authored the resulting paper.</p>
+            </div>
+          </details>
         </div>
-        <div class="sub">Student Researcher, Thiemann Group</div>
-        <ul>
-          <li>Built a MATLAB image-processing pipeline that directly observed high-altitude gravity waves for the first
-            time in NASA satellite imagery; co-authored the resulting paper.</li>
-        </ul>
-      </div>
+      </details>
     </section>
 
     <section id="publications">
       <h2>Publications &amp; Preprints</h2>
-      <ul class="list">
-        <li><em>Observing Gravity Waves in the Thermosphere through Solar Occultations</em>, with E. Thiemann.
-          <span class="status">2025, under review.</span></li>
-        <li><em>Quantum MRF MAP Inference on Extended Bose–Hubbard Machines.</em>
-          <span class="status">2026, in preparation.</span></li>
-        <li><em>Semantic Geometry of Datasets via Speciation Times.</em>
-          <span class="status">In preparation (honors thesis).</span></li>
-      </ul>
+
+      <details class="drop">
+        <summary><span class="label">Semantic Geometry via Diffusion Models</span><span class="meta">Honors thesis · in preparation</span></summary>
+        <div class="drop-body">
+          <p><em>Semantic Geometry of Datasets via Speciation Times.</em> In preparation (honors thesis).</p>
+          <p>Reads the semantic geometry of a dataset off diffusion-model dynamics, using conditional mutual information
+            phase transitions along denoising paths; continues
+            <a href="https://arxiv.org/abs/2609.38176v1" target="_blank" rel="noopener">arXiv:2609.38176</a>.</p>
+        </div>
+      </details>
+
+      <details class="drop">
+        <summary><span class="label">Quantum Constrained MRF MAP Inference via the Extended <span class="nowrap">Bose-Hubbard</span> Hamiltonian</span><span class="meta">2026 · in preparation</span></summary>
+        <div class="drop-body">
+          <p><em>Quantum MRF MAP Inference on Extended Bose-Hubbard Machines.</em> 2026, in preparation.</p>
+          <p>Adapts classical Markov random field MAP inference into quantum adiabatic algorithms for neutral-atom
+            hardware.</p>
+        </div>
+      </details>
+
+      <details class="drop">
+        <summary><span class="label">Thermospheric Gravity Waves</span><span class="meta">2025 · under review</span></summary>
+        <div class="drop-body">
+          <p><em>Observing Gravity Waves in the Thermosphere through Solar Occultations</em>, with E. Thiemann. 2025,
+            under review.</p>
+          <p>First direct observation of high-altitude gravity waves in NASA satellite imagery via a MATLAB
+            image-processing pipeline.</p>
+        </div>
+      </details>
     </section>
 
     <section id="talks">
-      <h2>Talks</h2>
-      <ul class="list">
-        <li><em>“Inference on Bose–Hubbard Machines via MRF MAP.”</em> CU Boulder Undergraduate Research Expo, Spring 2026.</li>
-        <li><em>“Clifford Hierarchy”</em> (group presentation, Quantum Error Correction Part 2). Gene Golub SIAM Summer
-          School, Duke University, July 2026.</li>
-        <li><em>“Computer Vision and Image Restoration on Bose–Hubbard Machines.”</em> Colorado Undergraduate Physics
-          Conference, Quantum Information Theory section, Fall 2025.</li>
-        <li>Technical lecture series (Python, ML fundamentals, local LLMs). CU Boulder AI Club, Fall 2025.</li>
-      </ul>
+      <h2>Talks &amp; Posters</h2>
+
+      <details class="drop">
+        <summary><span class="label"><span class="venue">SRI International</span> · <span class="topic">QKD &amp; Integrated Photonics*</span></span><span class="meta">August 2026</span></summary>
+        <div class="drop-body">
+          <p><em>“Summer Internship Summary.”</em> Talk, SRI International, Boulder, August 2026. Covers a testbed for
+            attacks on BB84 quantum key distribution (an entangled-photon source with FPGA single-photon counting) and
+            photonic integrated circuits for optical beam steering (Tidy3D ring-resonator simulations, Q-factor
+            analysis, and a 64-channel control GUI).</p>
+          <p><a class="pdf" href="assets/talks/sri-internship-summary.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> <span>View the slides*</span></a></p>
+        </div>
+      </details>
+
+      <details class="drop">
+        <summary><span class="label"><span class="venue">Duke University</span> · <span class="topic">Quantum Constrained MRF MAP Inference via the Extended <span class="nowrap">Bose-Hubbard</span> Hamiltonian</span></span><span class="meta">July 2026</span></summary>
+        <div class="drop-body">
+          <p><em>“Quantum MRF MAP Inference on Extended Bose-Hubbard Machines.”</em> Poster, Gene Golub SIAM Summer
+            School (Fault-Tolerant Algorithms in Quantum Computing), Duke University, July 2026.</p>
+        </div>
+      </details>
+
+      <details class="drop">
+        <summary><span class="label"><span class="venue">Duke University</span> · <span class="topic">Clifford Hierarchy</span></span><span class="meta">July 2026</span></summary>
+        <div class="drop-body">
+          <p><em>“Quantum Error Correction, Part 2: Clifford Hierarchy.”</em> Group talk at the Gene Golub SIAM Summer
+            School, Duke University, July 2026, with A. Bhople, Q. Hu, T. Wang, L. Wei, K. Yeon, and B. Zhang.</p>
+          <p><a href="#notes-clifford">Slides and writeup in Notes.</a></p>
+        </div>
+      </details>
+
+      <details class="drop">
+        <summary><span class="label"><span class="venue">CU Boulder Research Expo</span> · <span class="topic">Quantum Constrained MRF MAP Inference via the Extended <span class="nowrap">Bose-Hubbard</span> Hamiltonian</span></span><span class="meta">Spring 2026</span></summary>
+        <div class="drop-body">
+          <p><em>“Inference on Bose-Hubbard Machines via MRF MAP.”</em> Poster, CU Boulder Undergraduate Research Expo,
+            Spring 2026.</p>
+        </div>
+      </details>
+
+      <details class="drop">
+        <summary><span class="label"><span class="venue">Undergraduate Physics Conference of Colorado</span> · <span class="topic">Quantum Constrained MRF MAP Inference via the Extended <span class="nowrap">Bose-Hubbard</span> Hamiltonian</span></span><span class="meta">Fall 2025</span></summary>
+        <div class="drop-body">
+          <p><em>“Computer Vision and Image Restoration on Bose-Hubbard Machines.”</em> Talk, Undergraduate Physics
+            Conference of Colorado, Quantum Information Theory section, Fall 2025.</p>
+        </div>
+      </details>
+
+      <details class="drop">
+        <summary><span class="label"><span class="venue">CU Boulder AI Club</span> · <span class="topic">Coding &amp; AI Workshop Series</span></span><span class="meta">Fall 2025</span></summary>
+        <div class="drop-body">
+          <p>Workshop series for the CU Boulder AI Club, Fall 2025:</p>
+          <ul>
+            <li><em>“Coding Foundations &amp; Why AI Matters”</em> (Sept. 17): introduction to Python and AI.
+              <a class="pdf" href="assets/talks/ai-club-lecture-1.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> <span>Slides</span></a></li>
+            <li><em>“Data, ML, and AI: What Are They?”</em> (Oct. 15): supervised, unsupervised, and reinforcement
+              learning. <a class="pdf" href="assets/talks/ai-club-lecture-2.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> <span>Slides</span></a></li>
+            <li><em>“Running AI on Your Own Device”</em> (Nov. 11): local LLMs and sampling parameters (temperature,
+              top&#8209;k, top&#8209;p). <a class="pdf" href="assets/talks/ai-club-lecture-3.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> <span>Slides</span></a></li>
+          </ul>
+        </div>
+      </details>
+
+      <p class="footnote">* Some content has been redacted.</p>
+    </section>
+
+    <section id="notes">
+      <h2>Notes</h2>
+      <p class="lede">Writeups and slides from the quantum error correction group project at the Gene Golub SIAM
+        Summer School, Duke University, 2026.</p>
+
+      <details class="group" id="notes-clifford">
+        <summary>
+          <h3>The Clifford Hierarchy</h3>
+          <span class="meta">Writeups + slides</span>
+          <span class="sub">QEC Part 2 · A. Bhople, Q. Hu, T. Middleton, T. Wang, L. Wei, K. Yeon, B. Zhang</span>
+        </summary>
+        <div class="group-body">
+          <details class="drop">
+            <summary><span class="label">Survey Writeup</span><span class="meta">PDF · 6 pp.</span></summary>
+            <div class="drop-body">
+              <p>Gate teleportation as the motivation for the hierarchy; semi-Clifford and generalized semi-Clifford
+                gates; diagonal gates and their normal form; climbing the hierarchy with CSS codes and Clifford square
+                roots; permutation gates in the third level; logical Clifford synthesis; open problems.</p>
+              <p><a class="pdf" href="assets/notes/clifford-hierarchy.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> <span>Read the writeup</span></a></p>
+            </div>
+          </details>
+          <details class="drop">
+            <summary><span class="label">Presentation Slides</span><span class="meta">PDF</span></summary>
+            <div class="drop-body">
+              <p>The group talk. Beyond the writeup, it covers transversal gates, how a code and its qubit partition cap
+                the reachable level, physical versus logical hierarchies, and the ways past that cap (magic states,
+                code switching, lattice surgery, and more).</p>
+              <p><a class="pdf" href="assets/notes/clifford-hierarchy-slides.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> <span>View the slides</span></a></p>
+            </div>
+          </details>
+          <details class="drop">
+            <summary><span class="label">Part 1: qLDPC Codes &amp; Decoding</span><span class="meta">4 PDFs</span></summary>
+            <div class="drop-body">
+              <p>The other half of the project, by X. Chen, G. Li, R. Tah, T. Tang, and J. Wang.</p>
+              <ul class="pdfs">
+                <li><a class="pdf" href="assets/notes/qldpc-surface-code-decoding.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> <span>qLDPC Code, Surface Code and Decoding</span></a> (writeup, 10 pp.)</li>
+                <li><a class="pdf" href="assets/notes/qldpc-report.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> <span>From Tanner Codes to Good Quantum LDPC Codes</span></a> (report, 8 pp.)</li>
+                <li><a class="pdf" href="assets/notes/qec-summary.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> <span>From Classical LDPC Codes to Good Quantum LDPC Codes and Decoding</span></a> (summary, 2 pp.)</li>
+                <li><a class="pdf" href="assets/notes/qldpc-slides.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> <span>From Tanner Codes to Good Quantum LDPC Codes</span></a> (slides)</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </details>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
 
-      <div class="item featured">
-        <div class="item-head">
-          <h3>The Clifford Hierarchy: A Survey for Quantum Error Correction</h3>
-          <span class="date">July 2026</span>
+      <details class="group">
+        <summary>
+          <h3>Quantum Information</h3>
+          <span class="meta">3 projects</span>
+        </summary>
+        <div class="group-body">
+          <details class="drop">
+            <summary><span class="label">Clifford Hierarchy Survey</span><span class="meta">Duke · July 2026</span></summary>
+            <div class="drop-body">
+              <p>A group literature review and presentation on the Clifford hierarchy and its role in fault-tolerant
+                quantum computation, with A. Bhople, Q. Hu, T. Wang, L. Wei, K. Yeon, and B. Zhang. It formed Part 2 of a
+                two-part QEC project at the Gene Golub SIAM Summer School, alongside a review of qLDPC codes and
+                surface-code decoding. <a href="#notes-clifford">Writeup and slides in Notes.</a></p>
+            </div>
+          </details>
+          <details class="drop">
+            <summary><span class="label">Quantum Perceptron</span></summary>
+            <div class="drop-body">
+              <p>A single-node quantum neural network in Qiskit that classifies MNIST digits with 85% accuracy.</p>
+            </div>
+          </details>
+          <details class="drop">
+            <summary><span class="label">M24 Quantum Cryptography</span><span class="meta">PHYS 2170</span></summary>
+            <div class="drop-body">
+              <p>A quantum cryptography encoding scheme based on quantum random walks for eavesdropping protection.</p>
+            </div>
+          </details>
         </div>
-        <div class="sub"><span class="tag">Group project</span> Gene Golub SIAM Summer School, Duke University · with
-          A. Bhople, Q. Hu, T. Wang, L. Wei, K. Yeon, and B. Zhang</div>
-        <p>
-          A literature review and presentation on the Clifford hierarchy and its role in fault-tolerant quantum
-          computation, forming Part 2 of a two-part QEC project alongside a review of qLDPC codes and surface-code
-          decoding. Covers gate teleportation, semi-Clifford and generalized semi-Clifford gates, diagonal gates and
-          climbing the hierarchy with CSS codes, permutation gates in the third level, and logical Clifford
-          synthesis, with open problems connecting hierarchy structure to transversal logical gates.
-        </p>
-      </div>
+      </details>
 
-      <div class="item">
-        <h3>Quantum Perceptron</h3>
-        <p>A single-node quantum neural network in Qiskit that classifies MNIST digits with 85% accuracy.</p>
-      </div>
-
-      <div class="item">
-        <h3>M24 Quantum Cryptography Encoding Scheme</h3>
-        <p>A quantum cryptography scheme based on quantum random walks for eavesdropping protection (PHYS 2170).</p>
-      </div>
-
-      <div class="item">
-        <h3>Gaussian Beam Propagation Simulator</h3>
-        <p>ABCD-matrix simulation of Gaussian beams through multi-element optical systems, built for the Kaufman lab.</p>
-      </div>
-
-      <div class="item">
-        <h3>Powerwash</h3>
-        <p>A full-stack web app for automatic data cleaning, including normalization and classification.</p>
-      </div>
+      <details class="group">
+        <summary>
+          <h3>Optics &amp; Software</h3>
+          <span class="meta">2 projects</span>
+        </summary>
+        <div class="group-body">
+          <details class="drop">
+            <summary><span class="label">Gaussian Beam Simulator</span></summary>
+            <div class="drop-body">
+              <p>An ABCD-matrix simulation of Gaussian beams through multi-element optical systems, built for the Kaufman
+                lab.</p>
+            </div>
+          </details>
+          <details class="drop">
+            <summary><span class="label">Powerwash</span></summary>
+            <div class="drop-body">
+              <p>A full-stack web app for automatic data cleaning, including normalization and classification.</p>
+            </div>
+          </details>
+        </div>
+      </details>
     </section>
 
     <section id="education">
       <h2>Education</h2>
 
-      <div class="item">
-        <div class="item-head">
+      <details class="group">
+        <summary>
           <h3>University of Colorado Boulder</h3>
-          <span class="date">08/2023 – 12/2026</span>
+          <span class="meta">08/2023 - 12/2026</span>
+          <span class="sub">B.S. Physics, Computer Science Minor</span>
+        </summary>
+        <div class="group-body">
+          <details class="drop">
+            <summary><span class="label">Graduate Coursework</span></summary>
+            <div class="drop-body">
+              <p>Quantum Information and Computing, Probability Theory.</p>
+            </div>
+          </details>
+          <details class="drop">
+            <summary><span class="label">Selected Coursework</span></summary>
+            <div class="drop-body">
+              <p>Quantum Mechanics 2, Thermodynamics &amp; Statistical Mechanics, Electricity &amp; Magnetism 2,
+                Classical Mechanics &amp; Mathematical Methods 2, Experimental Physics, Linear Algebra, Algorithms, Data
+                Structures.</p>
+            </div>
+          </details>
         </div>
-        <div class="sub">B.S. Physics, Computer Science minor</div>
-        <p><strong>Graduate coursework:</strong> Quantum Information and Computing, Probability Theory.</p>
-        <p><strong>Selected coursework:</strong> Quantum Mechanics 2, Thermodynamics &amp; Statistical Mechanics,
-          Electricity &amp; Magnetism 2, Classical Mechanics &amp; Mathematical Methods 2, Experimental Physics, Linear
-          Algebra, Algorithms, Data Structures.</p>
-      </div>
+      </details>
 
-      <div class="item">
-        <div class="item-head">
+      <details class="group">
+        <summary>
           <h3>Gene Golub SIAM Summer School, Duke University</h3>
-          <span class="date">July 2026</span>
+          <span class="meta">July 2026</span>
+          <span class="sub">Fault-Tolerant Algorithms in Quantum Computing</span>
+        </summary>
+        <div class="group-body">
+          <p>Accepted into this graduate/postdoctoral summer school with full financial support. Topics included Hamiltonian
+            learning and simulation, quantum error correction, and quantum hardware. Presented a poster and a group
+            talk (see <a href="#talks">Talks</a> and <a href="#notes">Notes</a>).</p>
         </div>
-        <div class="sub">Fault-Tolerant Algorithms in Quantum Computing</div>
-        <p>Graduate/postdoctoral summer school, accepted with full financial support. Topics included Hamiltonian
-          learning and simulation, quantum error correction, and quantum hardware.</p>
-      </div>
+      </details>
 
-      <div class="item">
-        <div class="item-head">
+      <details class="group">
+        <summary>
           <h3>Summer School on Formal Techniques, SRI International</h3>
-          <span class="date">May 2026</span>
+          <span class="meta">May 2026</span>
+        </summary>
+        <div class="group-body">
+          <p>Formal methods with Yices and PVS, including applications to quantum compilers.</p>
         </div>
-        <p>Formal methods with Yices and PVS, including applications to quantum compilers.</p>
-      </div>
+      </details>
     </section>
 
     <section id="honors">
       <h2>Honors &amp; Awards</h2>
-      <ul class="list">
-        <li>SPIE Fellow, Monroe Fellow, and Jennifer Turner-Valle Fellow, Quantum Scholars Cohort <span class="status">(2024–2027)</span></li>
-        <li>Google Fellow, Corporate Computing Affiliates Program <span class="status">(2024–2025)</span></li>
-        <li>Bowman Physics Scholarship <span class="status">(2026–2027)</span></li>
-        <li>Hale Esteemed Scholarship <span class="status">(2023–2027)</span></li>
-        <li>CU Boulder Quantum Hackathon, 3rd place <span class="status">(2023–2024)</span></li>
-      </ul>
+
+      <details class="drop">
+        <summary><span class="label">Quantum Scholars Fellow</span><span class="meta">2024-2027</span></summary>
+        <div class="drop-body">
+          <p>SPIE Fellow, Monroe Fellow, and Jennifer Turner-Valle Fellow, Quantum Scholars Cohort.</p>
+        </div>
+      </details>
+      <details class="drop">
+        <summary><span class="label">Google Fellow</span><span class="meta">2024-2025</span></summary>
+        <div class="drop-body">
+          <p>Google Fellow, Corporate Computing Affiliates Program.</p>
+        </div>
+      </details>
+      <details class="drop">
+        <summary><span class="label">Bowman Scholarship</span><span class="meta">2026-2027</span></summary>
+        <div class="drop-body">
+          <p>Bowman Physics Scholarship.</p>
+        </div>
+      </details>
+      <details class="drop">
+        <summary><span class="label">Hale Scholarship</span><span class="meta">2023-2027</span></summary>
+        <div class="drop-body">
+          <p>Hale Esteemed Scholarship.</p>
+        </div>
+      </details>
+      <details class="drop">
+        <summary><span class="label">Quantum Hackathon</span><span class="meta">2023-2024</span></summary>
+        <div class="drop-body">
+          <p>CU Boulder Quantum Hackathon, 3rd place.</p>
+        </div>
+      </details>
     </section>
 
     <section id="skills">
@@ -251,22 +492,64 @@
 
     <section id="service">
       <h2>Service &amp; Leadership</h2>
-      <ul class="list">
-        <li><strong>AI Club at CU Boulder</strong>, VP of Technology: built the club's first technical curriculum and
-          research cohort on LLM hallucination. <span class="status">(2025–Present)</span></li>
-        <li><strong>PISEC</strong>: science instruction and STEM mentoring in Boulder Valley high schools. <span class="status">(2025–Present)</span></li>
-        <li><strong>Quantum Scholars</strong>, Alice &amp; Bob Mentorship Program: mentor. <span class="status">(2025–Present)</span></li>
-        <li><strong>Tutoring</strong>: physics, computer science, math, MCAT topics, and Spanish for high school
-          students and peers. <span class="status">(2024–Present)</span></li>
-        <li><strong>Triangle Engineering &amp; Science Fraternity</strong>, Co-Founder. <span class="status">(2023–2024)</span></li>
-      </ul>
+
+      <details class="drop">
+        <summary><span class="label">AI Club at CU Boulder</span><span class="meta">2025-Present</span></summary>
+        <div class="drop-body">
+          <p>VP of Technology: built the club’s first technical curriculum and a research cohort on agentic science,
+            in collaboration with Christoffer Heckman.</p>
+        </div>
+      </details>
+      <details class="drop">
+        <summary><span class="label">PISEC</span><span class="meta">2025-Present</span></summary>
+        <div class="drop-body">
+          <p>Science instruction and STEM mentoring in Boulder Valley high schools.</p>
+        </div>
+      </details>
+      <details class="drop">
+        <summary><span class="label">Quantum Scholars Mentor</span><span class="meta">2025-Present</span></summary>
+        <div class="drop-body">
+          <p>Mentor in the Quantum Scholars Alice &amp; Bob Mentorship Program.</p>
+        </div>
+      </details>
+      <details class="drop">
+        <summary><span class="label">Tutoring</span><span class="meta">2024-Present</span></summary>
+        <div class="drop-body">
+          <p>Physics, computer science, math, MCAT topics, and Spanish for high school students and peers.</p>
+        </div>
+      </details>
+      <details class="drop">
+        <summary><span class="label">Triangle Fraternity</span><span class="meta">2023-2024</span></summary>
+        <div class="drop-body">
+          <p>Co-Founder, Triangle Engineering &amp; Science Fraternity.</p>
+        </div>
+      </details>
     </section>
 
   </main>
 
   <footer>
-    <div class="wrap">Last updated September 2026</div>
+    <div class="wrap">Last updated October 2026</div>
   </footer>
+
+  <script>
+    // Open the drop-downs around an in-page link target, and expand everything when printing.
+    function openAround(el) {
+      for (; el; el = el.parentElement) if (el.tagName === "DETAILS") el.open = true;
+    }
+    function openHash() {
+      if (location.hash) openAround(document.getElementById(location.hash.slice(1)));
+    }
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest('a[href^="#"]');
+      if (a && a.getAttribute("href").length > 1) openAround(document.getElementById(a.getAttribute("href").slice(1)));
+    });
+    window.addEventListener("hashchange", openHash);
+    openHash();
+    window.addEventListener("beforeprint", function () {
+      document.querySelectorAll("details").forEach(function (d) { d.open = true; });
+    });
+  </script>
 
 </body>
 

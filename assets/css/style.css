@@ -5,7 +5,6 @@
   --faint: #8a8a96;
   --rule: #e6e6ec;
   --accent: #5d00ff;
-  --accent-soft: #f3edff;
   --max: 880px;
 }
 
@@ -131,52 +130,96 @@ h2 {
   border-top: 1px solid var(--rule);
 }
 
-.item { margin-bottom: 22px; }
-.item:last-child { margin-bottom: 0; }
-.item-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
+/* ---------- Drop-downs ----------
+   .group: a category (position, topic, school) whose summary row carries the key facts.
+   .drop:  a short label that expands to the full detail. */
+summary { cursor: pointer; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+
+.group > summary,
+.drop > summary { position: relative; padding-left: 22px; }
+
+/* Chevron: points right when closed, down when open */
+.group > summary::before,
+.drop > summary::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: .75em;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid var(--faint);
+  border-bottom: 2px solid var(--faint);
+  transform: translateY(-50%) rotate(-45deg);
+  transition: transform .15s ease;
 }
-.item h3 { font-size: 20px; font-weight: 600; margin: 0; }
-.item .date {
+details[open] > summary::before { transform: translateY(-70%) rotate(45deg); }
+.group > summary:hover::before,
+.drop > summary:hover::before { border-color: var(--accent); }
+
+.group { margin-bottom: 16px; }
+.group:last-child { margin-bottom: 0; }
+.group > summary {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 16px;
+  align-items: baseline;
+}
+.group > summary h3 { font-size: 20px; font-weight: 600; margin: 0; }
+.group > summary:hover h3 { color: var(--accent); }
+.group > summary .meta {
   color: var(--faint);
   font-size: 18px;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
-.item .sub { color: var(--muted); font-size: 18.5px; font-style: italic; }
-.item ul { margin: 6px 0 0; padding-left: 18px; }
-.item li { margin-bottom: 3px; }
-.item p { margin: 6px 0 0; }
+.group > summary .sub {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 18.5px;
+  font-style: italic;
+}
+.group-body { padding: 6px 0 6px 22px; }
+.group-body > p { margin: 0 0 6px; font-size: 18.5px; }
 
 @media (max-width: 640px) {
-  .item-head { flex-direction: column; gap: 0; }
+  .group > summary { grid-template-columns: 1fr; }
 }
 
-.featured {
-  background: var(--accent-soft);
-  border-radius: 10px;
-  padding: 18px 20px;
+.drop { margin: 3px 0; }
+.drop > summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  column-gap: 16px;
 }
-.tag {
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--accent);
-  background: #fff;
-  border: 1px solid #ddd0ff;
-  border-radius: 999px;
-  padding: 1px 9px;
-  margin-right: 6px;
-  font-style: normal;
-  vertical-align: 1px;
+.drop > summary:hover .label,
+.drop[open] > summary .label { color: var(--accent); }
+.drop > summary .meta {
+  color: var(--faint);
+  font-size: 17px;
+  font-variant-numeric: tabular-nums;
 }
+.drop > summary .topic { color: var(--muted); }
+.nowrap { white-space: nowrap; }
+/* On wide screens long labels wrap in place, keeping the meta on the right */
+@media (min-width: 641px) {
+  .drop > summary .label { flex: 1 1 0; min-width: 0; }
+}
+.drop-body { padding: 2px 0 10px 22px; font-size: 18.5px; }
+.drop-body p { margin: 0 0 6px; }
+.drop-body p:last-child { margin-bottom: 0; }
+.drop-body ul { margin: 0 0 6px; padding-left: 18px; }
+.drop-body li { margin-bottom: 3px; }
+.drop-body .pdfs { list-style: none; padding-left: 0; }
 
-.list { list-style: none; margin: 0; padding: 0; }
-.list li { margin-bottom: 10px; }
-.list .status { color: var(--faint); }
+.lede { color: var(--muted); margin: -4px 0 16px; }
+.footnote { color: var(--faint); font-size: 16px; margin: 12px 0 0; }
+
+.pdf { display: inline-flex; align-items: center; gap: 7px; font-weight: 500; }
+.pdf:hover { text-decoration: none; }
+.pdf:hover span { text-decoration: underline; text-underline-offset: 3px; }
 
 .skills { display: grid; grid-template-columns: 170px 1fr; gap: 6px 16px; margin: 0; }
 .skills dt { font-weight: 600; font-size: 19px; }
